@@ -1,0 +1,120 @@
+* {
+  font-size: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+}
+
+.header {
+  background-color: #5e008a;
+}
+
+.header .left {
+  float: left;
+}
+
+.header .left ul .menu {
+  background-color: yellow;
+  list-style-type: none;
+  display: inline-block;
+  position: relative;
+  padding: 12px;
+  top: 0px;
+}
+
+.header .left ul .menu a {
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 5px;
+}
+
+.header .left ul .menu ol {
+  display: none;
+}
+
+.header .left ul .menu ol .submenu {
+  background-color: #f5f4ff;
+  padding: 5px 10px 5px 10px;
+  list-style-type: none;
+  width: 150px;
+}
+
+.header .left ul .menu ol .submenu a {
+  color: #ce1b1b;
+}
+
+.header .left ul .menu ol .submenu:hover {
+  background-color: black;
+}
+
+.header .left ul .menu:hover ol {
+  display: block;
+  position: absolute;
+  top: 40px;
+  left: -35%;
+  z-index: 2;
+}
+
+.header .right {
+  background-color: #5e008a;
+  float: right;
+  line-height: 85px;
+}
+
+.header .right input {
+  border-radius: 10px;
+  height: 40px;
+}
+
+.header .right input:hover {
+  background-color: red;
+  border: 0px;
+}
+
+.header::before, .header::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.main {
+  background-color: lightblue;
+  height: 400px;
+  position: relative;
+  top: 0px;
+}
+
+.main #box {
+  background-color: #5e008a;
+  color: white;
+  font-size: larger;
+  text-align: center;
+  line-height: 100px;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-500px);
+          transform: translate(-500px);
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
+}
+
+.main #box:hover {
+  background-color: red;
+  -webkit-transform: translate(0px);
+          transform: translate(0px);
+}
+
+.footer {
+  background-color: #5e008a;
+  height: 300px;
+}
+/*# sourceMappingURL=main.css.map */
