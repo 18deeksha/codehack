@@ -7,6 +7,11 @@
     //margin: 5px;
     //border: 1px solid greenyellow;
 }
+.main{
+    border: 2px solid red;
+    box-sizing: border-box;
+}
+
 body{
     margin: 0px;
 }
@@ -93,36 +98,119 @@ body{
 }
 
 .main{
-    background-color: lightblue;
-    height: 400px;  
-    position: relative;
-    top:0px;
-    #box{
-        background-color: $primary-color;
-        color: white;
-        font-size: larger;
-        text-align: center;
-        line-height: 100px;
-        height: 100px;
-        width: 100px;
-        position: absolute;
-        top:50%;
-        left:50%;
-        transform: translate(-500px);
-        transition:transform 2s;
+    background-color: rgb(45, 112, 134);
+    height: 30em;  
+    margin: 5px;
+    padding: 10px;
+    .content{
+        width: 70%;
+        float: left;
+        height: 100%;
+        background-color: rgb(79, 211, 255);
+       
+    }
+    aside{
+        width: 30%;
+        float: right;
+        height: 100%;
+        background-color: rgb(121, 135, 139);
+        ul{
+            list-style-type: none;
+            padding: 0px;
+            li{
+                display: inline-block;
+                margin: 0px;
+                padding: 5px;
+                text-align: center;
+                width: 100%;
+                a{
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    border: 0px; 
+                    color: rgb(196, 255, 20); 
+                }
+                &:hover{
+                    background-color: lightblue;
+                }
 
-        &:hover{
-            background-color: red;
-            transform: translate(0px);
+            }
+           
+        }
+        
+    }
+    &::before &::after{
+        content: '';
+        clear: both;
+        display: block;
+    }
+}
+
+@mixin common($bc:#b100ff) {
+    background-color: $bc;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    margin: 3px;
+    height: 100px;
+}
+.services{
+    @include common();
+    padding: 1px 10px 10px 0px;
+    @media screen and(min-width:0px) and (max-width:505px){
+        &{
+            height: 430px;
+            
+        }
+    }
+    @media screen and(min-width:506px) and (max-width:800px){
+        &{
+            height: 410px;
+        }
+    }
+    @media screen and(min-width:801px){
+        &{
+            height: 410px;
         }
     }
 
-
-
-
-
+    .box{
+        @include common(#00ffaa);
+        
+        @media screen and(min-width:0px) and (max-width:505px){
+            &{
+                background-color: red;
+                width: 100%;
+                
+                
+            }
+        }
+        @media screen and(min-width:506px) and (max-width:800px){
+            &{
+                background-color: rgb(78, 69, 69);
+                color: white;
+                width: 48%;
+                float: left;
+            }
+        }
+        @media screen and(min-width:801px){
+            &{
+                background-color: rgb(255, 11, 194);
+                width: 24%;
+                float: left;
+            }
+        }
+    }
+    &::before,&::after{
+        content: '';
+        clear: both;
+        display: block;
+    }
 }
+
+
+
+
 .footer{
     background-color: $primary-color;
     height: 300px;
+   
 }

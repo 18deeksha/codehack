@@ -4,6 +4,12 @@
           box-sizing: border-box;
 }
 
+.main {
+  border: 2px solid red;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   margin: 0px;
 }
@@ -82,35 +88,119 @@ body {
 }
 
 .main {
-  background-color: lightblue;
-  height: 400px;
-  position: relative;
-  top: 0px;
+  background-color: #2d7086;
+  height: 30em;
+  margin: 5px;
+  padding: 10px;
 }
 
-.main #box {
-  background-color: #5e008a;
-  color: white;
-  font-size: larger;
+.main .content {
+  width: 70%;
+  float: left;
+  height: 100%;
+  background-color: #4fd3ff;
+}
+
+.main aside {
+  width: 30%;
+  float: right;
+  height: 100%;
+  background-color: #79878b;
+}
+
+.main aside ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.main aside ul li {
+  display: inline-block;
+  margin: 0px;
+  padding: 5px;
   text-align: center;
-  line-height: 100px;
-  height: 100px;
-  width: 100px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-500px);
-          transform: translate(-500px);
-  -webkit-transition: -webkit-transform 2s;
-  transition: -webkit-transform 2s;
-  transition: transform 2s;
-  transition: transform 2s, -webkit-transform 2s;
+  width: 100%;
 }
 
-.main #box:hover {
-  background-color: red;
-  -webkit-transform: translate(0px);
-          transform: translate(0px);
+.main aside ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 0px;
+  color: #c4ff14;
+}
+
+.main aside ul li:hover {
+  background-color: lightblue;
+}
+
+.main::before .main::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.services {
+  background-color: #b100ff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  margin: 3px;
+  height: 100px;
+  padding: 1px 10px 10px 0px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 505px) {
+  .services {
+    height: 430px;
+  }
+}
+
+@media screen and (min-width: 506px) and (max-width: 800px) {
+  .services {
+    height: 410px;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .services {
+    height: 410px;
+  }
+}
+
+.services .box {
+  background-color: #00ffaa;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  margin: 3px;
+  height: 100px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 505px) {
+  .services .box {
+    background-color: red;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 506px) and (max-width: 800px) {
+  .services .box {
+    background-color: #4e4545;
+    color: white;
+    width: 48%;
+    float: left;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .services .box {
+    background-color: #ff0bc2;
+    width: 24%;
+    float: left;
+  }
+}
+
+.services::before, .services::after {
+  content: '';
+  clear: both;
+  display: block;
 }
 
 .footer {
