@@ -1,0 +1,53 @@
+*{
+    //border:2px solid black;
+    margin: 5px;
+    padding:5px;
+}
+.header{
+    background-color: rgb(235, 235, 255);
+}
+
+
+.main{
+
+    .container{
+        //background-color: black;
+        display:flex;
+        flex-wrap:wrap;
+        flex-direction: row;
+        div:nth-child(even){
+            background-color: red;
+        }
+        div:nth-child(odd){
+            background-color: white;
+        }
+        .items{
+            //flex-grow: 1;
+            //flex-basis: 22%;
+            height: 300px;
+            width:22%;
+            transform: scale(1,1);
+            transition: all 1s ease;
+            border-radius: 10px;
+            box-shadow: 1px 1px 3px 1px rgb(255, 31, 31);
+            
+            &:hover{
+                transform: scale(1.1,1.1);
+                border-radius: 10px;
+                z-index: 12;
+               
+            }
+        }
+    }
+    
+}
+
+.services{
+    border: 2px solid red;
+    
+}
+
+
+.footer{
+    background-color: rgb(41, 41, 42);
+}

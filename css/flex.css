@@ -1,0 +1,56 @@
+* {
+  margin: 5px;
+  padding: 5px;
+}
+
+.header {
+  background-color: #ebebff;
+}
+
+.main .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.main .container div:nth-child(even) {
+  background-color: red;
+}
+
+.main .container div:nth-child(odd) {
+  background-color: white;
+}
+
+.main .container .items {
+  height: 300px;
+  width: 22%;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 3px 1px #ff1f1f;
+          box-shadow: 1px 1px 3px 1px #ff1f1f;
+}
+
+.main .container .items:hover {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+  border-radius: 10px;
+  z-index: 12;
+}
+
+.services {
+  border: 2px solid red;
+}
+
+.footer {
+  background-color: #29292a;
+}
+/*# sourceMappingURL=flex.css.map */
